@@ -24,7 +24,7 @@ Converts markdown files including rst to a valid rst format
 
 %prep
 %setup -qn m2r-%{version}
-%apply_patches
+%autopatch -p1
 
 mkdir python2
 mv `ls |grep -v python2` python2
