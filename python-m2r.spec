@@ -1,7 +1,7 @@
 Summary:	Converts markdown files including rst to a valid rst format
 Name:		python-m2r
 Version:	0.3.2
-Release:	2
+Release:	3
 License:	MIT
 Group:		Development/Python
 # Old Url:		https://pypi.org/project/m2r/
