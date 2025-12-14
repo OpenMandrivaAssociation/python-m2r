@@ -1,28 +1,20 @@
 Summary:	Converts markdown files including rst to a valid rst format
 Name:		python-m2r
-Version:	0.3.2
-Release:	3
+Version:	0.3.4
+Release:	1
 License:	MIT
 Group:		Development/Python
 # Old Url:		https://pypi.org/project/m2r/
 Url:		https://pypi.org/project/m2r2/
 Source0:	https://files.pythonhosted.org/packages/source/m/m2r2/m2r2-%{version}.tar.gz
-BuildRequires:	pkgconfig(python3)
-BuildRequires:	python-setuptools
+BuildSystem:	python
+BuildRequires:	python%{pyver}dist(setuptools)
 BuildArch:	noarch
 
 %description
 Converts markdown files including rst to a valid rst format
 
-%prep
-%autosetup -p1 -n m2r2-%{version}
-
-%build
-python setup.py build
-
-%install
-python setup.py install --root=%{buildroot}
-
+%install -a
 ln -s m2r2 %{buildroot}%{_bindir}/m2r
 ln -s m2r2.py %{buildroot}%{py_sitedir}/m2r.py
 cp -a %{buildroot}%{py_sitedir}/m2r2-%{version}-py%{python_version}.egg-info %{buildroot}%{py_sitedir}/m2r-%{version}-py%{version}.egg-info
