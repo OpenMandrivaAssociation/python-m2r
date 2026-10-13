@@ -26,7 +26,6 @@ echo 'from m2r2 import *' > %{buildroot}%{py_sitedir}/m2r.py
 %license LICENSE
 %doc README.md
 %{py_sitedir}/m2r.py
-%{py_sitedir}/__pycache__/m2r.cpython-*.pyc
 %{py_sitedir}/m2r2
 %{py_sitedir}/m2r2-%{version}.dist-info
 %{_bindir}/m2r
